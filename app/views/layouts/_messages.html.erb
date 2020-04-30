@@ -1,0 +1,28 @@
+<% if flash[:error] %>
+  <div class="container">
+    <div class="row center">
+      <div class="col s12 m12 l12">
+        <div class="card-panel red lighten-2">
+          <span class="white-text">
+            <%= flash[:error] %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<% if flash[:notice] %>
+  <div class="container">
+    <div class="row center">
+      <div class="col s12 m12 l12">
+        <div class="card-panel green lighten-2">
+          <span class="white-text">
+            <%= flash[:notice] %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

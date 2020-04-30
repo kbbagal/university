@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row center">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+      <h3 class="header">Sign Up</h3>
+        <div class="row">
+          <%= form_with(model: @student, url: (@student.new_record? ? students_path : student_path), method: (@student.new_record? ? :post : :patch), class: "col s12", local: true) do |f| %>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <%= f.text_field :name, id: "icon_prefix", class: "validate", placeholder: "Enter your name" %>
+              <label for="icon_prefix"></label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <%= f.email_field :email, id: "email_prefix", class: "validate", placeholder: "Enter your email" %>
+              <label for="icon_email"></label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">enhanced_encryption</i>
+              <%= f.password_field :password, id: "password_prefix", class: "validate", placeholder: "Choose your password" %>
+              <label for="icon_password"></label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">enhanced_encryption</i>
+              <%= f.password_field :password_confirmation, id: "password_prefix", class: "validate", placeholder: "Confirm your password" %>
+              <label for="icon_password"></label>
+            </div>
+            <button class="btn waves-effect waves-light " type="submit" name="action"><%= @student.new_record? ? "Sign up" : "Update" %>
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
